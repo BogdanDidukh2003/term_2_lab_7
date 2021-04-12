@@ -1,0 +1,186 @@
+class Teacher {
+    
+    private String nameSurname;
+    private int age;
+    private String gender;
+
+    private int experience;
+    private String alias;
+    private String subject;
+    private int height;
+    private boolean isKind;
+
+    static private int yearOfFoundationOfLvivPolytechnic;
+
+    protected String hairColor;
+    protected String eyesColor;
+
+    static {
+        yearOfFoundationOfLvivPolytechnic = 1816;
+    }
+
+    public Teacher() {
+    }
+
+    public Teacher(String nameSurname, int age, String gender, int experience) {
+        this.nameSurname = nameSurname;
+        this.age = age;
+        this.gender = gender;
+        this.experience = experience;
+    }
+
+    public Teacher(String nameSurname, int age, String gender, int experience, String alias, String subject, int height, boolean isKind, String hairColor, String eyesColor) {
+        this(nameSurname, age, gender, experience);
+        this.alias = alias;
+        this.subject = subject;
+        this.height = height;
+        this.isKind = isKind;
+        this.hairColor = hairColor;
+        this.eyesColor = eyesColor;
+    }
+
+    public String getNameSurname() {
+        return this.nameSurname;
+    }
+
+    public void setNameSurname(String nameSurname) {
+        this.nameSurname = nameSurname;
+    }
+
+    public int getAge() {
+        return this.age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getGender() {
+        return this.gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getExperience() {
+        return this.experience;
+    }
+
+    public void setExperience(int experience) {
+        this.experience = experience;
+    }
+
+    public String getAlias() {
+        return this.alias;
+    }
+
+    public void setAlias(String alias) {
+        this.alias = alias;
+    }
+
+    public String getSubject() {
+        return this.subject;
+    }
+
+    public void setSubject(String subject) {
+        this.subject = subject;
+    }
+
+    public int getHeight() {
+        return this.height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
+
+    public boolean getIsKind() {
+        return this.isKind;
+    }
+
+    public void setIsKind(boolean isKind) {
+        this.isKind = isKind;
+    }
+
+    public String getHairColor() {
+        return this.hairColor;
+    }
+
+    public void setHairColor(String hairColor) {
+        this.hairColor = hairColor;
+    }
+
+    public String getEyesColor() {
+        return this.eyesColor;
+    }
+
+    public void setEyesColor(String eyesColor) {
+        this.eyesColor = eyesColor;
+    }
+
+    public String toString() {
+        return "{" +
+            " nameSurname='" + getNameSurname() + "'" +
+            ", age='" + getAge() + "'" +
+            ", gender='" + getGender() + "'" +
+            ", experience='" + getExperience() + "'" +
+            ", alias='" + getAlias() + "'" +
+            ", subject='" + getSubject() + "'" +
+            ", height='" + getHeight() + "'" +
+            ", isKind='" + getIsKind() + "'" +
+            ", hairColor='" + getHairColor() + "'" +
+            ", eyesColor='" + getEyesColor() + "'" +
+            "}";
+    }
+
+    public static void printStaticYearOfFoundationOfLvivPolytechnic() {
+        System.out.println(yearOfFoundationOfLvivPolytechnic);
+    }
+
+    public void printFieldYearOfFoundationOfLvivPolytechnic() {
+        System.out.println(yearOfFoundationOfLvivPolytechnic);
+    }
+
+    public void resetValues(String nameSurname, int age, String gender, int experience, String alias, String subject, int height, boolean isKind, String hairColor, String eyesColor) {
+        this.nameSurname = nameSurname;
+        this.age = age;
+        this.gender = gender;
+        this.experience = experience;
+        this.alias = alias;
+        this.subject = subject;
+        this.height = height;
+        this.isKind = isKind;
+        this.hairColor = hairColor;
+        this.eyesColor = eyesColor;
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+        Teacher andres = new Teacher("Andriy Andres", 55, "male", 25, "San-Andres", "PE", 180, false, "black", "brown");
+        Teacher kuba = new Teacher("Nataliya Kuba", 30, "female", 8);
+        kuba.setAlias("sonechko"); 
+        kuba.setSubject("presentation");
+        kuba.setHeight(180);
+        kuba.setIsKind(true);
+        kuba.setHairColor("brown");
+        kuba.setEyesColor("blue");
+        Teacher nytrebych = new Teacher();
+        nytrebych.setNameSurname("Zinoviy Nytrebych");
+        nytrebych.setAge(60);
+        nytrebych.setGender("male");
+        nytrebych.setExperience(30);
+        nytrebych.setAlias("Ninadych");
+        nytrebych.setSubject("High meth");
+        nytrebych.setHeight(180);
+        nytrebych.setIsKind(true);
+        nytrebych.setHairColor("grey");
+        nytrebych.setEyesColor("grey");
+        System.out.println(andres.toString() + "\n" + kuba.toString() + "\n" + nytrebych.toString());
+        Teacher.printStaticYearOfFoundationOfLvivPolytechnic();
+        andres.printFieldYearOfFoundationOfLvivPolytechnic();
+
+    }
+}
