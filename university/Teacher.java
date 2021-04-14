@@ -22,23 +22,15 @@ public class Teacher {
     }
 
     public Teacher() {
+        this("nameSurname", 100, "gender", 100, "alias", "subject", 100, true, "hairColor", "eyesColor");
     }
 
     public Teacher(String nameSurname, int age, String gender, int experience) {
-        this.nameSurname = nameSurname;
-        this.age = age;
-        this.gender = gender;
-        this.experience = experience;
+        this(nameSurname, age, gender, experience, "alias", "subject", 100, true, "hairColor", "eyesColor");
     }
 
     public Teacher(String nameSurname, int age, String gender, int experience, String alias, String subject, int height, boolean isKind, String hairColor, String eyesColor) {
-        this(nameSurname, age, gender, experience);
-        this.alias = alias;
-        this.subject = subject;
-        this.height = height;
-        this.isKind = isKind;
-        this.hairColor = hairColor;
-        this.eyesColor = eyesColor;
+        this.resetValues(nameSurname, age, gender, experience, alias, subject, height, isKind, hairColor, eyesColor);
     }
 
     public String getNameSurname() {
