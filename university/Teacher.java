@@ -109,6 +109,7 @@ public class Teacher {
         this.eyesColor = eyesColor;
     }
 
+    @Override
     public String toString() {
         return "{" +
             " nameSurname='" + getNameSurname() + "'" +
