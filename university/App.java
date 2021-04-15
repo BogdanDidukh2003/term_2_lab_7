@@ -22,7 +22,7 @@ public class App {
         nytrebych.setIsKind(true);
         nytrebych.setHairColor("grey");
         nytrebych.setEyesColor("grey");
-        System.out.println(andres.toString() + "\n" + kuba.toString() + "\n" + nytrebych.toString());
+        System.out.println(andres + "\n" + kuba + "\n" + nytrebych);
         Teacher.printStaticYearOfFoundationOfLvivPolytechnic();
         andres.printFieldYearOfFoundationOfLvivPolytechnic();
     }

@@ -12,21 +12,17 @@ public class Teacher {
     private int height;
     private boolean isKind;
 
-    static public int yearOfFoundationOfLvivPolytechnic;
+    static public int yearOfFoundationOfLvivPolytechnic = 1816;
 
     protected String hairColor;
     protected String eyesColor;
 
-    static {
-        yearOfFoundationOfLvivPolytechnic = 1816;
-    }
-
     public Teacher() {
-        this("nameSurname", 100, "gender", 100, "alias", "subject", 100, true, "hairColor", "eyesColor");
+        this(null, 0, null, 0, null, null, 0, true, null, null);
     }
 
     public Teacher(String nameSurname, int age, String gender, int experience) {
-        this(nameSurname, age, gender, experience, "alias", "subject", 100, true, "hairColor", "eyesColor");
+        this(nameSurname, age, gender, experience, null, null, 0, true, null, null);
     }
 
     public Teacher(String nameSurname, int age, String gender, int experience, String alias, String subject, int height, boolean isKind, String hairColor, String eyesColor) {
